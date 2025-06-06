@@ -2,7 +2,7 @@
     --searchbar-and-project-area-bg: #e2e8f0;
     --dashboard-and-profile-nav-and-project-fg: #ffffff;
     --first-column-and-share: #1992d4;
-    --icon-sizes: 18px;
+    --icon-sizes: 24px;
     --font-choice: 'Roboto';
 }
 
@@ -28,26 +28,25 @@
 /* HEADER ROW-1 AUTO */
 .header-content {
     grid-row: 1 / 2;
-    grid-column: 1 / 4;
+    grid-column: 2 / 4;
 
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 10px;
 }
 
 .dashboard {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 0px 0px 20px;
-
+    padding: 10px 80px 0px 10px;
     gap: 8px;
 }
 
 .dashboard svg {
     fill: var(--dashboard-and-profile-nav-and-project-fg);
-    
     width: 50px;
     height: auto;
 }
@@ -62,41 +61,53 @@
 
 .search {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 8px;
+    padding-top: 10px;
+    padding-left: 40px;
+    gap: 20px;
 }
 
 .search svg {
     width: var(--icon-sizes);
     height: auto;
+    /* transform: translateY(2px); */
 }
 
 .search-bar {
     background-color: var(--searchbar-and-project-area-bg);
-
-    height: 20px;
-    width: 250px;
+    border: none;
+    border-radius: 20px;
+    height: 25px;
+    width: 1000px
 }
 
 .profile-header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
     padding-right: 40px;
 }
 
 .profile-header svg {
     width: var(--icon-sizes);
     height: auto;
+    padding-right: 20px;
 }
 
-.profile-header img {
+.profile-header-frame {
     width: 40px;
     height: 40px;
-    object-fit: cover;
     border-radius: 50%;
+    overflow: hidden;
+}
+.profile-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(2);
+    object-position: 0% 80%;
 }
 
 .profile-name {
@@ -110,6 +121,8 @@
 .profile-nav {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
+    height: 100vh;
+    padding-left: 25px;
 }
 
 .profile-nav ul {
@@ -118,15 +131,16 @@
     align-items: flex-start;
     justify-content: flex-start;
 
-    gap: 8px;
+    gap: 20px;
     list-style-type: none;
-    padding: 20px 0px 0px 20px;
+    padding: 20px 0px 0px 0px;
 }
 
 .profile-nav li {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .profile-nav svg {
@@ -137,6 +151,11 @@
 
 .profile-nav span {
     font-family: var(--font-choice);
-    font-size: 12px;
+    color: var(--dashboard-and-profile-nav-and-project-fg);
+    font-size: 18px;
     font-weight: bold;
+}
+
+.group-end {
+    margin-bottom: 20px;
 }
