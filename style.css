@@ -1,7 +1,7 @@
 :root {
     --searchbar-and-project-area-bg: #e2e8f0;
-    --dashboard-and-profile-nav-and-project-fg: #ffffff;
-    --first-column-and-share: #1992d4;
+    --dashboard-and-profile-nav-and-project-fg: #000000;
+    --first-column-and-share: #ffc400;
     --icon-sizes: 24px;
     --font-choice: 'Roboto';
 }
@@ -101,6 +101,7 @@ body {
 }
 
 .profile-header-frame {
+    border: solid 2px black;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -183,6 +184,7 @@ body {
 }
 
 .uh-image-wrapper {
+    border: solid black;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -226,10 +228,11 @@ body {
 }
 
 .user-sharing span {
+    
     background-color: var(--first-column-and-share);
-    border: none;
+    border: solid 2px black;
     border-radius: 18px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: var(--font-choice);
     font-weight: bold;
     padding: 8px 30px;    
@@ -269,6 +272,8 @@ body {
     /* width: 500px;
     height: 300px; */
     border-radius: 10px;
+    border-left: 5px solid #ffc400;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 
 .project-text {
@@ -325,7 +330,6 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     max-width: 350px;
-
 }
 
 .announcements-grid-label {
@@ -340,6 +344,7 @@ body {
     background-color: white;
     padding: 20px 30px;
     border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.19);
     /* align-items: center; */
 }
 
@@ -382,6 +387,7 @@ body {
     border-radius: 10px;
     padding: 20px 20px;
     gap: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 
 .trending-img-wrap {
@@ -389,6 +395,8 @@ body {
     height: 40px;
     border-radius: 50%;
     overflow: hidden;
+    border: 1.5px solid black;
+    flex-shrink: 0;
 }
 
 .trending-grid-area {
@@ -417,6 +425,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-right: 20px;
     gap: 12px;
 }
 
@@ -429,4 +438,8 @@ body {
 
 .tp-username {
     font-weight: bold;
+}
+
+.tp-description {
+    font-size: 14px;
 }
